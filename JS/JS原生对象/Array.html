@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <script>
+        // ----- 纯函数 -----
+        // --->有返回值
+        // pop
+        let arrPop = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'pop - 【返回值：】',arrPop.pop(),'【原数组】',arrPop) // 原数组: ['a','b','c','d'],返回 e
+        
+        // push
+        let arrPush = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'push - 【返回值：】',arrPush.push('f'),'【原数组】',arrPush) // 原数组: ['a','b','c','d','e','f'],返回 6
+
+        // shift
+        let arrShift = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'shift - 【返回值：】',arrShift.shift(),'【原数组】',arrShift) // 原数组: ['b','c','d','e'],返回 a
+
+        // unshift
+        let arrUnshift = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'unshift - 【返回值：】',arrUnshift.unshift('0'),'【原数组】',arrUnshift) // 原数组: [0,'a','b','c','d','e'],返回 6
+        
+        // join
+        let arrJoin = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'join - 【返回值：】',arrJoin.join(),'【原数组】',arrJoin) // 原数组: ['a','b','c','d','e'],返回 'a,b,c,d,e'
+        
+        // toString
+        let arrToString = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'toString - 【返回值：】',arrToString.toString('-'),'【原数组】',arrToString) // 原数组: ['a','b','c','d','e'],返回  ["b", "c"]
+        
+        // sort
+        let arrSort = [3,13,1,4]
+        console.log([3,13,1,4],'sort - 【返回值：】',arrSort.sort((a,b)=>(a-b)),'【原数组】',arrSort) // 原数组: [3,13,1,4],返回 [1,3,4,13]
+
+        // reverse
+        let arrReverse = [3,13,1,4]
+        console.log([3,13,1,4],'reverse - 【返回值：】',arrReverse.reverse(),'【原数组】',arrReverse) // 原数组: [4,1,13,3],返回 [4,1,13,3]
+        
+        // splice
+        let arrSplice = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'splice - 【返回值：】',arrSplice.splice(2,1,'aa'),'【原数组】',arrSplice) // 原数组: ["a", "b", "aa", "d", "e"],返回 ["c"]
+
+        
+        // reduce
+        let arrReduce = [1,6,3,4,5,5]
+        console.log([1,6,3,4,5,5],'reduce - 【返回值：】',arrReduce.reduce((mid,item)=>{
+            return mid + '-' + item
+        }),'【原数组】',arrReduce) // 原数组: [1,6,3,4,5,5],返回   [6, 4, 5, 5]
+
+        // every
+        let arrEvery = [1,6,3,4,5,5]
+        console.log([1,6,3,4,5,5],'every - 【返回值：】',arrEvery.every((item,index)=>item<5),'【原数组】',arrEvery) // 原数组: [1,6,3,4,5,5],返回 false
+
+        // some
+        let arrSome = [1,6,3,4,5,5]
+        console.log([1,6,3,4,5,5],'some - 【返回值：】',arrSome.some((item,index)=>item<5),'【原数组】',arrSome) // 原数组: [1,6,3,4,5,5],返回   true
+        
+        // find
+        let arrFind = [2,3,8,1,0]
+        console.log([2,3,8,1,0],'find - 【返回值：】',arrFind.find(val=>val>2),'【原数组】',arrFind) // 原数组: [2,3,8,1,0],返回 
+
+        //findIndex
+        let arrFindIndex = [2,3,8,1,0]
+        console.log([2,3,8,1,0],'findIndex - 【返回值：】',arrFindIndex.findIndex(val=>val>5),'【原数组】',arrFindIndex) // 原数组: [2,3,8,1,0],返回 3
+
+        // --->无返回值
+
+
+        // forEach
+        let arrForEachEmpty = []
+        let arrForEach = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'forEach - 【返回值：】',arrForEach.forEach((val,index)=>arrForEachEmpty.push(val+index)),'【原数组】',arrForEach,'【arrForEachEmpty】：',arrForEachEmpty) // 原数组: ['a','b','c','d','e'],返回 undefined
+
+        
+
+
+        // ----- 纯函数 -----        
+        // concat
+        let arrConcat = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'concat - 【返回值：】',arrConcat.concat([1,2]),'【原数组】',arrConcat) // 原数组: ['a','b','c','d','e'],返回 ['a','b','c','d','e',1,2]
+        
+        // slice
+        let arrSlice = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'slice - 【返回值：】',arrSlice.slice(1,3),'【原数组】',arrSlice) // 原数组: ['a','b','c','d','e'],返回  ["b", "c"]
+        
+        // map
+        let arrMap = ['a','b','c','d','e']
+        console.log(['a','b','c','d','e'],'map - 【返回值：】',arrMap.map((val,index)=>(val+index)),'【原数组】',arrMap) // 原数组: ['a','b','c','d','e'],返回  ["a0", "b1", "c2", "d3", "e4"]
+
+
+        // filter
+        let arrFilterEmpty = []
+        let arrFilter = [1,6,3,4,5,5]
+        console.log([1,6,3,4,5,5],'filter - 【返回值：】',arrFilter.filter((val,index)=>{
+            if(val>3){
+                arrFilterEmpty.push(index)
+                return val
+            }
+        }),'【原数组】',arrFilter,'【arrFilterEmpty】：',arrFilterEmpty) // 原数组: [1,6,3,4,5,5],返回   [6, 4, 5, 5]
+    </script>
+</body>
+</html>

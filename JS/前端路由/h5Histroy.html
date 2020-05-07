@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h5History</title>
+</head>
+<body>
+    <button id="btn1">点击</button>
+    <script>
+        // 页面初次加载，获取hash
+        document.addEventListener('DOMContentLoaded',function(){
+            console.log('load',location.pathname)
+        })
+
+        // 打开一个新的路由
+        // 【注意】用 pushState 方式，浏览器不会刷新页面
+        document.getElementById('btn1').addEventListener('click',function(){
+            const state = {name: 'page1'}
+            console.log('切换路由到','page1')
+            history.pushState(state,'','page1')
+        })
+
+        //监听浏览器前进、后退
+        window.onpopstate = (event) => {
+            console.log('onpopstate',event.state,location.pathname)
+        } 
+
+        // 需要server 端配合
+    </script>
+</body>
+</html>

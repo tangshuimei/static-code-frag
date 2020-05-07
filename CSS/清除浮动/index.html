@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix{
+            zoom: 1; /*IE6、7 专有*/
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .ov{
+            overflow: hidden;
+        }
+        .clear{
+            zoom: 1;/*IE6、7 专有*/
+        }
+        .clear::before,.clear::after{
+          content: '';
+          display: table;  
+        }
+        .clear:after{
+            clear: both;
+        }
+
+        .parent{
+            background-color: cadetblue;
+            margin-bottom: 10px;
+        }
+        .child{
+            width: 100px;
+            height: 30px;
+            float: left;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <p>（1）给父级加overflow:hidden</p>
+    <p> 
+        优点： 代码简洁 <br/>
+        缺点： 内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素。
+    </p>
+    <div class="ov parent">
+        <div class="child">111</div>
+    </div>
+    <p>（2）使用after伪元素清除浮动</p>
+    <p>优点： 符合闭合浮动思想 结构语义化正确</p>
+    <div class="clearfix parent">
+        <div class="child">111</div>
+    </div>
+    <p>（3）before和after双伪元素清除浮动</p>
+    <p>优点： 代码更简洁</p>
+    <div class="clear parent">
+        <div class="child">111</div>
+    </div>
+</body>
+</html>

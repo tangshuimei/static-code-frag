@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直居中</title>
+    <link rel="stylesheet" href="./vertical.css">
+</head>
+<body>
+    <p>（1）vertical-align + inline-block + 伪元素before</p>
+    <div class="div div1">
+        <div class="child">111</div>
+    </div>
+    <p>（2）flex + align-item:center</p>
+    <div class="div div2">
+        <div class="child">111</div>
+    </div>
+    <p>（3）top:50% + transform: translate(-50%,-50%);</p>
+    <div class="div div3">
+        <div class="child">111</div>
+    </div>
+    <p>（4）relative + top: calc(50% - (height/2)px);</p>
+    <div class="div div4">
+        <div class="child">111</div>
+        <!-- <div class="child2">222</div> -->
+    </div>
+    <p>（5）absolute + left、right、top、bottom为0 + margin:auto</p>
+    <div class="div div5">
+        <div class="child">111</div>
+    </div>
+    <p>（6）display:table-cell +inline-block </p>
+    <div class="div div5">
+        <div class="child">111</div>
+    </div>
+    <div class="aa">
+        <div class="bb">
+            <div class="cc">
+                ccc
+            </div>
+        </div>
+    </div>
+</body>
+</html>

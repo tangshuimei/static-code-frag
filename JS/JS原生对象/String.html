@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        
+        let strCharAt = 'abc'
+        console.log('charAt-','【返回值】：',strCharAt.charAt(4),'【原字符串】：',strCharAt) 
+
+        let strConcat = 'abc'
+        console.log('concat-','【返回值】：',strConcat.concat('ccc'),'【原字符串】：',strConcat) 
+
+        let strIndexOf = 'abc'
+        console.log('indexOf-','【返回值】：',strIndexOf.indexOf('b'),'【原字符串】：',strIndexOf) 
+
+        let strMatch = 'abcbbs'
+        let strMatchNum = 'abc2sdjkahdc3ss'
+        console.log('match-','【返回值】：',strMatch.match('b'),'【原字符串】：',strMatch) 
+        console.log('match-','【返回值】：',strMatchNum.match(/\d/g),'【原字符串】：',strMatchNum) 
+
+        let strReplace = 'abcbbs'
+        let strReplaceNum = 'abc2sdjkahdc3ss'
+        console.log('replace-','【返回值】：',strReplace.replace('b','h'),'【原字符串】：',strReplace) 
+        console.log('replace-','【返回值】：',strReplaceNum.replace(/\d/g,0),'【原字符串】：',strReplaceNum) 
+
+        let strSearch = 'abc2sdjkahdc3ss'
+        console.log('search-','【返回值】：',strSearch.search(/\d/),'【原字符串】：',strSearch) 
+        
+        let strSlice = 'abc2sdjkahdc3ss'
+        console.log('slice-','【返回值】：',strSlice.slice(1,3),'【原字符串】：',strSlice) 
+        
+        let strSplit = 'abc2-sdjka-hdc3ss'
+        console.log('split-','【返回值】：',strSplit.split('-',2),'【原字符串】：',strSplit) 
+        
+        let strSubStr = 'abc2-sdjka-hdc3ss'
+        console.log('substr-','【返回值】：',strSubStr.substr(1,3),'【原字符串】：',strSubStr) 
+        
+        let strSubString = 'abc2-sdjka-hdc3ss'
+        console.log('substring-','【返回值】：',strSubString.substring(1,3),'【原字符串】：',strSubString) 
+        
+        let strToLowerCase = 'aBDC'
+        console.log('toLowerCase-','【返回值】：',strToLowerCase.toLowerCase(),'【原字符串】：',strToLowerCase) 
+        
+        let strToUpperCase = 'aBDC'
+        console.log('toUpperCase-','【返回值】：',strToUpperCase.toUpperCase(),'【原字符串】：',strToUpperCase) 
+    </script>
+</body>
+</html>
